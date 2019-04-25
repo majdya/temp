@@ -1,0 +1,8 @@
+.book {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin: 1%;
+  padding-top: 1%;
+  text-align: center;
+  background-color: #999;
+}
