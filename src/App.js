@@ -24,8 +24,11 @@ export default class App extends React.Component {
     this.setState({ search });
   };
 
+  handleChange(txt) {
+    this.setState({ inputTxt: txt });
+  }
   render() {
-    const { error, isLoaded, books } = this.state;
+    const { error, isLoaded, books, search } = this.state;
 
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -34,7 +37,7 @@ export default class App extends React.Component {
     } else {
       return (
         <>
-          <SearchBar />
+          <SearchBar onSearch={this.handleSeach} search={search} />
           <hr />
           <BooksList books={books.items} />
         </>

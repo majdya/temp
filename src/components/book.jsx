@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./book.css"
+import "./book.css";
 class Book extends Component {
   state = {
     isLoaded: false,
@@ -16,7 +16,7 @@ class Book extends Component {
     // console.log(this.props.book);
   }
   render() {
-    console.log(this.state.book);
+    // console.log(this.state.book);
     const { isLoaded, book, authors } = this.state;
     let authorsStr;
     if (authors) {
